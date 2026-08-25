@@ -1,0 +1,18 @@
+{
+  "name": "sera-liquidity-probe",
+  "version": "0.1.0",
+  "description": "Keyless liquidity and rate probe for Sera's on-chain FX orderbook. Answers which currency pairs can actually be quoted, at what size, and what the flat gas cost does to the effective rate.",
+  "type": "module",
+  "bin": { "sera-liquidity-probe": "src/cli.js" },
+  "main": "src/index.js",
+  "exports": { ".": "./src/index.js" },
+  "scripts": {
+    "probe": "node src/cli.js",
+    "test": "node --test test/*.test.js",
+    "smoke": "node src/cli.js --currencies USD,SGD --max-rungs 2"
+  },
+  "engines": { "node": ">=18" },
+  "keywords": ["sera", "stablecoin", "fx", "orderbook", "liquidity", "built-on-sera"],
+  "license": "MIT",
+  "files": ["src", "README.md", "LICENSE"]
+}
